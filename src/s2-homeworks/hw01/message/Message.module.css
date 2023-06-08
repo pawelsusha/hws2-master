@@ -1,31 +1,80 @@
 .message {
-
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .imageAndText {
+    color: white;
 
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .imageAndText img {
-
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
 }
 
 .text {
+    background: #0066CC;
+    box-shadow: 0 5px 20px rgba(29, 33, 38, 0.03), 0 1px 2px rgba(29, 33, 38, 0.1);
 
+    padding: 8px 25px 8px;
+    margin: 0 8px;
+    border-radius: 8px 8px 0 8px;
+
+    position: relative;
 }
 
 .text:after {
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #0066CC;
+    border-right: 11px solid transparent;
+
+    right: -10px;
+    bottom: 0;
+
+    position: absolute;
+    content: "";
 
 }
 
 .name {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
 
+    margin-bottom: 3px;
+
+    color: #FFFFFF;
 }
 
 .messageText {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 
+    color: #FFFFFF;
 }
 
 .time {
+    display: flex;
+    justify-content: flex-end;
 
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+
+    margin-right: 11px;
+
+    color: #000000;
 }
