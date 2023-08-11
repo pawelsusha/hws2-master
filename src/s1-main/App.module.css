@@ -1,11 +1,17 @@
 .App {
     --header_height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .hw {
-
+width: 600px;
 }
 
 .hwTitle {
-
+text-align: center;
+    font-weight: bold;
 }

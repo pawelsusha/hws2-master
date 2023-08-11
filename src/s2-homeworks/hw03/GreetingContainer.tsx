@@ -24,14 +24,11 @@ export const pureAddUser = (
 
 export const pureOnBlur = (name: string, setError: (error: string) => void) => {
     if (name.trim() === '') {
-        setError('Ошибка! Введите имя!');
+        setError('Eroor! Fill the name!');
     }
 }; // Closing brace was missing
 
-export const pureOnEnter = (
-    e: KeyboardEvent<HTMLInputElement>,
-    addUser: () => void
-) => {
+export const pureOnEnter = (    e: KeyboardEvent<HTMLInputElement>,    addUser: () => void) => {
     if (e.keyCode === 13) {
         addUser();
     }

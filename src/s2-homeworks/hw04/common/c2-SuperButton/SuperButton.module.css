@@ -1,36 +1,113 @@
 .button {
+    display: inline-flex;
+    padding: 0.3125rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.1875rem;
+    color:  #FFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
 }
 
 .disabled {
+    background: #acd6fa;
+    color: #4796e3;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+    border: none;
 }
 
 .secondary {
+    border-radius: 0.1875rem;
+    border: 1px solid #06C;
+    color: #06C;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
 }
 
 .default {
+    color: #FFF;
+    font-family: Montserrat, sans-serif ;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+    background-color:#0066CC;
+    border: none;
 }
 
 .red {
+    background: #CC1439;
+    color:#FFFFFF;
+    border: none;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
 }
 
 .default:hover {
+    border-radius: 0.1875rem;
+    background: #0080FF;
+    border: none;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
 }
 
 .red:hover {
+    border-radius: 0.1875rem;
+    background: #FF1A47;
 }
 
 .secondary:hover {
+    border-radius: 0.1875rem;
+    border: 1px solid #06C;
+    background: #ccf1ff;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
 }
 
 
 .default:active {
+    border-radius: 0.1875rem;
+    background: #0059B2;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
 }
 
 .secondary:active {
+    border-radius: 0.1875rem;
+    border: 1px solid #06C;
+    background: #9ebff3;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
 }
 
 .red:active {
+    border-radius: 0.1875rem;
+    background: #B21232;
 }
 
 .button:disabled {
+    border-radius: 0.1875rem;
+    opacity: 0.5;
+    background: #004D99;
 }
