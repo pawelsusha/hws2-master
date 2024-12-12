@@ -7,24 +7,24 @@ WORKDIR /app
 # Устанавливаем Git
 RUN apk add --no-cache git
 
-# Копируем package.json и yarn.lock в рабочую директорию
-COPY package.json yarn.lock ./
+# Копируем package.json и package-lock.json в рабочую директорию
+COPY package*.json ./
 
 # Устанавливаем зависимости
-RUN yarn install
+RUN npm install
 
 # Клонируем репозиторий
 ARG REPO_URL
 RUN git clone $REPO_URL .
 
 # Собираем приложение
-RUN yarn build
+RUN npm run build
 
-# Устанавливаем serve для обслуживания статических файлов
-RUN yarn global add serve
+# Устанавливаем сервер для обслуживания статических файлов
+RUN npm install -g http-server
 
-# Открываем порт 5000
-EXPOSE 5000
+# Открываем порт 8080
+EXPOSE 8080
 
-# Запускаем serve для обслуживания статических файлов
-CMD ["serve", "-s", "build"]
+# Запускаем http-server для обслуживания статических файлов
+CMD ["http-server", "build"]
