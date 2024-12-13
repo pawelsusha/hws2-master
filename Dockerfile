@@ -1,5 +1,5 @@
 # Базовый образ
-FROM node:23
+FROM node:18-alpine
 
 # Установите рабочую директорию
 WORKDIR /usr/src/app
