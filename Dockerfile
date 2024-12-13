@@ -1,11 +1,20 @@
-# Base image
-FROM node:18-alpine
+# Базовый образ
+FROM node:23
 
-# Create app directory
+# Установите рабочую директорию
 WORKDIR /usr/src/app
 
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# Копирование package.json и package-lock.json
 COPY package*.json ./
 
-# Install app dependencies
+# Установка зависимостей
 RUN yarn install
+
+# Копирование исходного кода приложения
+COPY . .
+
+# Указание порта
+EXPOSE 3000
+
+# Команда для запуска приложения
+CMD ["yarn", "start"]
