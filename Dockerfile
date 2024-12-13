@@ -1,30 +1,11 @@
-# Используем официальный образ Node.js Alpine как базовый образ
-FROM node:14-alpine
+# Base image
+FROM node:18
 
-# Устанавливаем рабочую директорию
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
-# Устанавливаем Git
-RUN apk add --no-cache git
-
-# Копируем package.json и package-lock.json в рабочую директорию
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
 
-# Устанавливаем зависимости
+# Install app dependencies
 RUN npm install
-
-# Клонируем репозиторий
-ARG REPO_URL
-RUN git clone $REPO_URL .
-
-# Собираем приложение
-RUN npm run build
-
-# Устанавливаем сервер для обслуживания статических файлов
-RUN npm install -g http-server
-
-# Открываем порт 8080
-EXPOSE 8080
-
-# Запускаем http-server для обслуживания статических файлов
-CMD ["http-server", "build"]
